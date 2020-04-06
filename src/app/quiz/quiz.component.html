@@ -1,0 +1,78 @@
+<!--<app-navbar></app-navbar>-->
+<body class="wholeBody">
+<div class="row" *ngIf="quizService.qns && this.quizService.qnProgress != 10">
+    <div [hidden] = "isShow" class="col s8 offset-s2">
+        <div class="progress progressDisplay">
+            <div class="determinate" [style.width.%]="(quizService.qnProgress+1)*10"></div>
+        </div>        
+            <div class="card-content white-text">
+                <span class="card-title progressDisplay">{{quizService.qnProgress+1}}</span> 
+                <p class="vraag">{{quizService.qns[quizService.qnProgress].Qn}}</p> 
+                <!--<div *ngIf="quizService.qns[quizService.qnProgress].ImageName!=null">-->
+                <div>
+                  <img class="center" [src]="quizService.rootUrl+'/Images/'+quizService.qns[quizService.qnProgress].ImageName" style="width:200px;height:200px">
+                </div>                  
+            </div>
+            <div class="card-action"></div>
+            <ul class="answer">
+                <ng-container *ngFor="let option of quizService.qns[quizService.qnProgress].Options;let i = index">
+                    <button class="waves-effect waves-light btn-large btn-submit optie"><li class="optieLi" *ngIf="option != null" (click)="Answer(quizService.qns[quizService.qnProgress].QnID,i)" (click) = toggleDisplay()>
+                        {{option}}
+                      </li></button>
+                </ng-container>
+            </ul> 
+                      
+            <span>{{ShowMeSecurityCount()}}</span><br />
+            <span>{{ShowMeIotCount()}}</span><br />
+            <span>{{ShowMeSoftwareCount()}}</span><br />
+            <span>{{ShowMeBusinessCount()}}</span>
+            <span></span>
+    </div>
+    <div>
+      <div class="wholeBody" *ngIf="quizService.qnProgress+1 == 3">
+        <!--<img class="fblogo offset-s3 selectedGuideImage levelImage" src="/assets/img/rocket.png"/>-->
+        
+
+        <tr>
+          <td class="tabel">
+              <div id="images">
+                <tr class="bubbleColumn">
+                <th><div class="box1 sb5"><label class="bubbleText">Heel goed! Hop naar de volgende.</label></div></th>
+                <!--<th><img src="{{quizService.getRandomAvatar()}}" class="avatar"></th> -->
+                <img class="fblogo offset-s3 selectedGuideImage levelImage" src="/assets/img/doctor.png"/>
+                </tr>                
+            </div>
+          </td>
+        </tr>
+
+        <button [hidden] = "!isShow" class="center levelButton waves-effect waves-light btn-large btn-submit optie zwarteLetters nextButton" (click)="GoToLevelTwo()">Next!</button>
+      </div>
+      <table [hidden] = "!isShow" class="awardTabel">
+        <tr>
+          <th class="bubbleColumn"><img class="fblogo offset-s3 underImage" src="/assets/img/badge1.png"/></th>
+          <th class="bubbleColumn"><img class="fblogo offset-s3 underImage disabledBagde" src="/assets/img/badge2.png"/></th>
+        </tr>
+      </table>   
+
+      
+    </div>
+    <!--<footer class="wholeBody page-footer footerColor">
+        <div class="container">
+          <div class="row">
+            <div class="col l4 offset-l2 s12">
+                <table cellspacing="100">
+                    <tr class="bubbleColumn">
+                      <th><div class="box1 sb5">{{quizService.getLocalSentence(quizService.qnProgress+1)}}</div></th>
+                      
+                      <img src="/assets/img/gidsen/kelly.svg"  class="avatar">
+                      <img src="/assets/img/gidsen/yves.svg"  class="avatar"> 
+                    </tr>
+                </table>
+            </div>
+          </div>
+        </div>
+      </footer>-->
+      <!--<th><img src="{{quizService.getRandomAvatar()}}" class="avatar"></th> -->
+</div>
+</body>
+

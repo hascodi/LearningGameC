@@ -1,0 +1,37 @@
+<div class="wholeBody  row">
+    <div class="col s6 offset-s3">
+        <div class="card extraBorder wholeBody ">            
+            <label *ngIf="!isVisible" class="center eersteTitel">Wat moet ik over het Corona-virus weten?</label>            
+            <table class="bubbleColumn" style="width:100%">                
+                <tr>
+                  <td class="tabel">
+                      <div id="images">
+                        <tr class="bubbleColumn">
+                        <th><div class="box1 sb5"><label class="bubbleText">Speel met ons mee en kom meer te weten over hoe je jezelf én uw omgeving kan beschermen!</label></div></th>
+                        <!--<th><img src="{{quizService.getRandomAvatar()}}" class="avatar"></th> -->
+                            <img class="fblogo offset-s3 selectedGuideImage avatar" src="/assets/img/doctors/male.png"/>
+                            <img class="fblogo offset-s3 selectedGuideImage avatar" src="/assets/img/doctors/female.png"/> <!--hier ook werken met een boolean naargelang de gekozen gids-->
+                        </tr>                
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                      <div class="col s6">  
+                          <a *ngIf="!isVisible" (click)="checkVisibility(true)" (click)="goToQuiz()"
+                              class="waves-effect waves-light btn-large center registerButton">IK DOE MEE!</a>    
+                      </div>
+                    </td>
+                  </tr>
+            </table>
+            <label class="offset-s3 left footerLogo">WorkerPro Games ©</label>
+        </div>
+    </div>
+    <table  class="awardTabel">
+      <tr>
+        <th class="bubbleColumn"><img class="fblogo offset-s3 underImage disabledBagde" src="/assets/img/badge1.png"/></th>
+        <th class="bubbleColumn"><img class="fblogo offset-s3 underImage disabledBagde" src="/assets/img/badge2.png"/></th>
+      </tr>
+    </table>   
+</div>
+

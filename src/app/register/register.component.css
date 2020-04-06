@@ -1,0 +1,246 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .eersteTitel {
+    font-size: 35px;
+    margin-bottom: 50px;
+    font-family: 'Quicksand';
+    font: Regular 40px/49px Quicksand;
+    width:100%;
+    letter-spacing: 0;
+    color: white;
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .extraBorder{
+    box-shadow: none!important;
+  }
+
+  .waves-effect.waves-light.btn-large {
+      background-color: white !important;
+      color: #1e4154;
+      box-shadow: 3px 3px 5px grey;
+      font-family: 'Quicksand';
+      border-radius: 10px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      opacity: 1;
+      margin-top: 50px;
+  }
+
+  .formFields {
+    font-family: 'Quicksand';
+  }
+
+  .stepOne {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: 'Quicksand';
+    font: Regular 40px/49px Quicksand;
+    width:100%;
+    letter-spacing: 0;
+    color: #666666;
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .introUitleg {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Quicksand';
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0;
+    font: 500 20px Quicksand;
+    color: #666666;
+    opacity: 1;
+    font-weight: bold;
+  }
+
+  .radioTekst {
+    color: #666666;
+    opacity: 1;
+    letter-spacing: 1;
+  }
+
+  .registerButton {  
+    margin-top: 10px !important;  
+    font-weight: bold;
+    letter-spacing: 1px;
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+    display:block;
+    text-align:center;
+    font-family: 'Quicksand';
+    margin-left: 170px;
+  }
+
+  .avatarDiv {
+    padding-top: 50px;
+    width:80%;
+    margin:auto;
+  }
+
+  .boxes {
+    width:50%;
+	  float:left;
+  }
+
+  .guideButton {        
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .guideImage {
+    display: block;
+    width: 100%;
+  }
+
+  .selectedGuideImage {
+    display: block;
+    height: 150px;
+    width: 150px;
+  }
+
+  .voorstelling {
+    font-size: 35px;
+    font-family: 'Quicksand';
+    font: Regular 40px/49px Quicksand;
+    width:100%;
+    color: #666666;
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 1px;    
+  }
+
+  .voorstellingText { 
+    font-size: smaller;
+    font-family: 'Quicksand';
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    font: 500 20px Quicksand;
+    color: #666666;
+    opacity: 1;
+
+  }
+
+  .centerGuideText {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .genderpadding {
+    padding-right: 100px;
+  }
+
+  .column {
+    float: left;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .page-footer.footerColor {
+    background: transparent;
+  }
+
+  .footerLogo {
+    height: 30%;
+    width: 30%; 
+    margin-left: 600px;
+    float: left;
+    color: white;
+}
+
+.fblogo {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#images{
+  text-align:center;
+}
+
+.wholeBody {
+  /*background-image: url("/assets/img/background.jpg");*/
+  /*background-color: #8F90FF;*/
+  background-color: #5FAAE8;
+}
+
+.box1 {
+  width: 300px;
+  border: 4px solid white;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: black;
+  position: relative;
+  font-family: 'Quicksand';
+  border-radius: 47%;
+}
+
+.sb5:before {
+  content: "";
+  width: 0px;
+  margin-top: 28px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid white;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+  border-bottom: 10px solid transparent;
+  right: -21px;
+  top: 20px;
+}
+
+.bubbleText{
+  color: white;
+  font-size: medium;
+  font-weight: 500;  
+  font-family: 'Quicksand';
+}
+
+.bubbleColumn {
+  border: none;
+  border-collapse: inherit;
+}
+
+.footerLogo {
+  margin-top: 10px;
+  float: left;
+  color: mintcream;
+}
+
+.underImage {
+  margin-top: 5px;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.disabledBagde {
+  filter: grayscale(100%);
+}
+
+.awardTabel {
+    border-collapse: collapse;
+    width: 10px;
+  }

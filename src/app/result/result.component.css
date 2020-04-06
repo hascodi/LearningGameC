@@ -1,0 +1,187 @@
+.replyIcon {
+    background-color: #97000c;
+}
+
+.extraBorder{
+    box-shadow: none!important;
+  }
+
+ .header {
+     font-family: 'Quicksand';     
+     color: #666666;
+ }
+
+ .resultTitel {
+     text-transform: uppercase;
+     text-align: left;
+     font: Regular 40px/49px Montserrat;
+     letter-spacing: 0;
+     opacity: 1;
+     width:850px;
+     color: white;
+     text-align: center;
+ }
+
+ .progress {
+    height: 25px;
+    border-radius: 25px;
+    background-color:lightgray;
+    margin-top: 50px;
+    background: #DDDDDD 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.progress .determinateGatekeeper {
+    background: #000000 0% 0% no-repeat padding-box !important;
+    opacity: 1;
+}
+
+.progress .determinatePioneer {
+    background: #82368C 0% 0% no-repeat padding-box !important;
+    opacity: 1;
+}
+
+.progress .determinateCreator {
+    background: #137F0D 0% 0% no-repeat padding-box !important;
+    opacity: 1;
+}
+
+.progress .determinateBridgeBuilder {
+    background: #538FCC 0% 0% no-repeat padding-box !important;
+    opacity: 1;
+}
+
+ .resultPercentage {
+     font-family: 'Quicksand';
+     color: #666666;
+     text-align: left;
+     float: left;
+ }
+
+ .meerInfo {
+     text-align: right;
+     float: right;
+     width: 200px;
+ }
+
+ .resultParent {
+    white-space: nowrap;
+ }
+
+ .waves-effect.waves-light.btn-large {
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 5px #000000;
+    font-family: 'Quicksand';
+    border-radius: 20px;
+    border: 5px solid #8F90FF;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.waves-effect.waves-light.btn-large:active {
+    background-color: grey;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .progressGatekeeper:before {
+    content: "Gatekeeper";
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .progressPioneer:before {
+    content: "Pioneer";
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .progressCreator:before {
+    content: "Creator";
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .progressBridgeBuilder:before {
+    content: "Bridge Builder";
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .extraBorderResBlack {
+    /*box-shadow: 1px 1px 1px 0px !important;*/
+      border-radius: 15px;
+      /*box-shadow: 1px 1px 5px 0px #000000;*/
+      box-shadow: 1px 3px 4px grey !important;
+  }
+
+  .extraBorderResPurple {
+      border-radius: 15px;
+      box-shadow: 1px 3px 4px #82368C !important;
+  }
+
+  .extraBorderResGreen {
+    border-radius: 15px;
+    box-shadow: 1px 3px 4px #137F0D !important;
+}
+
+.extraBorderResBlue {
+    border-radius: 15px;
+    box-shadow: 1px 3px 4px #538FCC !important;
+}
+
+.wholeBody {
+    /*background-image: url("/assets/img/background.jpg");*/
+    background-color: #8F90FF;
+}
+
+.formFields {
+    font-family: 'Quicksand';
+    color: white;
+  }
+
+  .iconColor {
+      color: white;
+  }
+
+  .formFields {
+    border-bottom-color: white !important;
+  }
+
+  .formulier {
+      padding-top: 30px;
+  }
+
+  .page-footer {
+      background-color: #8F90FF;
+  }
+
+  .footerLogo {
+    height: 30%;
+    width: 30%; 
+    margin-right: 300px;
+    float: left;
+    color: white;
+}
+
+
+
