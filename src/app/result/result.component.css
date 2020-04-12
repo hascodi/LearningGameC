@@ -151,7 +151,7 @@
 
 .wholeBody {
     /*background-image: url("/assets/img/background.jpg");*/
-    background-color: #8F90FF;
+    background-color: #5FAAE8;
 }
 
 .formFields {
@@ -172,7 +172,7 @@
   }
 
   .page-footer {
-      background-color: #8F90FF;
+      background-color: #5FAAE8;
   }
 
   .footerLogo {
@@ -181,6 +181,22 @@
     margin-right: 300px;
     float: left;
     color: white;
+}
+
+.underImage {
+    margin-top: 5px;
+    width: 150px;
+    height: 150px;
+    display: block;
+  }
+
+  .bubbleColumn {
+    border: none;
+    border-collapse: inherit;
+  }
+
+.extraLeftSpace {
+    margin-left: 20px;
 }
 
 

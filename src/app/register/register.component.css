@@ -70,7 +70,7 @@
   }
 
   .registerButton {  
-    margin-top: 10px !important;  
+    margin-top: 5px !important;  
     font-weight: bold;
     letter-spacing: 1px;
     width:100%;
@@ -244,3 +244,11 @@
     border-collapse: collapse;
     width: 10px;
   }
+
+.badgesText {
+  color: rgb(255, 255, 255);
+  font-size: small;
+  font-weight: 500;  
+  font-family: 'Quicksand';
+  padding-left: 10px;
+}

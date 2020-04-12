@@ -30,8 +30,14 @@
           <h5 class="col s10 resultPercentage">{{quizComponent.ShowMeSecurityCount()}}</h5>
       </div>
       <div class="progress">
-          <div class="determinateGatekeeper progressGatekeeper" [style.width.%]="quizComponent.ShowMeSecurityCount()"></div>
+          <div class="determinateGatekeeper progressGatekeeper" [style.width.%]="quizComponent.ShowMeSecurityCount()"></div>          
       </div>
+      <table style="width:100%">
+        <tr>        
+          <th class="bubbleColumn"><img class="fblogo offset-s3 underImage extraLeftSpace" src="/assets/img/badge1.png"/><label class="labelBadge">WorkerPro COVID-19 Safety Badge</label></th>
+          <th class="bubbleColumn"><img class="fblogo offset-s3 underImage " src="/assets/img/badge2.png"/><label class="labelBadge">WorkerPro Golden Champion</label></th>
+        </tr>
+      </table> 
   </div>  
 
   <form class="formulier" #registerForm="ngForm" (ngSubmit)="OnSubmit(Email.value)">  
@@ -49,6 +55,16 @@
         </div>
     </div>  
   </form>
+
+
+  <footer class="page-footer footerColor">
+    <div class="col l6 s12 left">
+      <!--<img src="/assets/img/logo2.png"  class="offset-s3 left footerLogo">-->
+      <label class="offset-s3 left footerLogo">WorkerPro Games ©</label>
+  
+  </div>
+  </footer>
+  </div>
 </div>
 
 
@@ -57,13 +73,6 @@
 
 
 
-<footer class="page-footer footerColor">
-  <div class="col l6 s12 left">
-    <!--<img src="/assets/img/logo2.png"  class="offset-s3 left footerLogo">-->
-    <label class="offset-s3 left footerLogo">WorkerPro Games ©</label>
 
-</div>
-</footer>
-</div>
 
 

@@ -13,7 +13,7 @@ export class LeveltweeComponent implements OnInit {
   stap1 = true;
   stap2 = false;
   stap3 = false;
-  progressTeller = 0;
+  progressTeller = 20;
 
 
   /*toggleDisplay() {
@@ -23,7 +23,7 @@ export class LeveltweeComponent implements OnInit {
     
   }*/
 
-  constructor(private quizService: QuizService) { }
+  constructor(private router: Router, private quizService: QuizService) { }
 
   ngOnInit() {
     /*if (this.quizService.qnProgress == 10)
@@ -34,20 +34,22 @@ export class LeveltweeComponent implements OnInit {
     this.stap2 = !this.stap2;
     this.stap1 = !this.stap1;
     this.stap3 = false;
+    window.scroll(0,0);
   }
 
   GoToStep3() {
     this.stap2 = !this.stap2;
     this.stap1 = false;
     this.stap3 = !this.stap3;
+    window.scroll(0,0);
   }
 
   GoToOverview() {
-    
+    this.router.navigate(['/result']);
   }
 
   VerhoogProgressTeller() {
-    this.progressTeller++;
+    this.progressTeller += 20;
   }
 
 }

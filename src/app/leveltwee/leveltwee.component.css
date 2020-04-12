@@ -79,7 +79,7 @@
 }
 
 .levelButton {
-    margin-top: 70px;
+    margin-top: 10px;
     width: 300px;
     height: 75px;
     display: block;
@@ -119,4 +119,8 @@
 
 .handen {
     margin-right: 70px;
+}
+
+.eersteTabel {
+    padding-top: 10px;
 }
