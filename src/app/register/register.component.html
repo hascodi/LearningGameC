@@ -1,4 +1,4 @@
-<div class="wholeBody  row">
+<div class="wholeBody  center">
     <div class="col s6 offset-s3">
         <div class="card extraBorder wholeBody ">            
             <label *ngIf="!isVisible" class="center eersteTitel">Hoe bescherm ik mezelf en mijn omgeving tegen het Corona-virus?</label>            
@@ -7,32 +7,44 @@
                   <td class="tabel">
                       <div id="images">
                         <tr class="bubbleColumn">
-                        <th><div class="box1 sb5"><label class="bubbleText">Speel met ons mee en kom meer te weten over hoe je jezelf én uw omgeving kan beschermen!</label></div></th>
-                        <!--<th><img src="{{quizService.getRandomAvatar()}}" class="avatar"></th> -->
-                            <img class="fblogo offset-s3 selectedGuideImage avatar" src="/assets/img/doctors/male.png"/>
-                            <img class="fblogo offset-s3 selectedGuideImage avatar" src="/assets/img/doctors/female.png"/> <!--hier ook werken met een boolean naargelang de gekozen gids-->
+                            <th><div class="box1 sb5"><label class="bubbleText">Speel met ons mee en kom meer te weten over hoe je jezelf én uw omgeving kan beschermen!</label></div></th>
+                            <!--<th><img src="{{quizService.getRandomAvatar()}}" class="avatar"></th> -->
+                            <th><img class="fblogo offset-s3 selectedGuideImage avatar" src="/assets/img/doctors/male.png"/></th>
+                            <th><img class="fblogo offset-s3 selectedGuideImage avatar" src="/assets/img/doctors/female.png"/></th> <!--hier ook werken met een boolean naargelang de gekozen gids-->
                         </tr>                
-                    </div>
+                      </div>
                   </td>
                 </tr>
-                <tr>
-                    <td>
-                      <div class="col s6">  
-                          <a *ngIf="!isVisible" (click)="checkVisibility(true)" (click)="goToQuiz()"
-                              class="waves-effect waves-light btn-large center registerButton">IK DOE MEE!</a>    
-                      </div>
-                    </td>
-                  </tr>
             </table>
-            <label class="offset-s3 left footerLogo">WorkerPro Games ©</label>
+
+                <tr>
+                  <table class="tabel">
+                        <tr class="bubbleColumn">
+                            <th>
+                                <p class="badgesText">Te winnen WorkerPro Badges</p>
+                                <tr>    
+                                  <th class="bubbleColumn"><img class="fblogo offset-s3 underImage grayscale blur" src="/assets/img/badge1.png"/></th>
+                                  <th class="bubbleColumn"><img class="fblogo offset-s3 underImage grayscale blur" src="/assets/img/badge2.png"/></th>
+                                </tr>
+                                <tr>
+                                  <th class="teWinnenBadgesTekst">WorkerPro COVID-19 Safety Badge</th>
+                                  <th class="teWinnenBadgesTekst">WorkerPro Golden Champion</th>
+                                </tr>                              
+                            </th>
+                            <th>
+                              <td>
+                                <div class="col s6">  
+                                    <a *ngIf="!isVisible" (click)="checkVisibility(true)" (click)="goToQuiz()"
+                                        class="waves-effect waves-light btn-large center registerButton">IK DOE MEE!</a>  
+                                        <div class="footerDiv">
+                                          <label class="offset-s3 footerLogo right">Powered by WorkerPro Games</label>
+                                        </div>  
+                                </div>                               
+                              </td>
+                        </tr>  
+                  </table>
+                </tr>                      
         </div>
-    </div>
-    <table  class="awardTabel">
-      <p class="badgesText">Te winnen WorkerPro Bages</p>
-      <tr>        
-        <th class="bubbleColumn"><img class="fblogo offset-s3 underImage disabledBagde" src="/assets/img/badge1.png"/></th>
-        <th class="bubbleColumn"><img class="fblogo offset-s3 underImage disabledBagde" src="/assets/img/badge2.png"/></th>
-      </tr>
-    </table>   
+    </div>      
 </div>
 

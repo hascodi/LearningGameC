@@ -10,62 +10,87 @@
         <div>
           <div class="wholeBody">
             <!--<img class="fblogo offset-s3 selectedGuideImage levelImage" src="/assets/img/rocket.png"/>-->
-            
+            <!--6 stappen in totaal-->
     
             <tr>
-                <td class="tabel eersteTabel">
+                <td [hidden] = "stap3" class="tabel eersteTabel">
                   <div id="images">
                     <tr class="bubbleColumn eersteTabel">
 
                         <div [hidden] = "!stap1">
                             <th><div><label class="bubbleText" >Onze ziekenhuizen, de dokters en de verpleegkundigen zijn volop bezig om besmette mensen te verzorgen.</label></div></th>
                             <th><img class="fblogo offset-s3 levelImage" src="/assets/img/hospital.png"/></th>
-                            <th><img class="fblogo offset-s3 underImage" src="/assets/img/charity.png"/></th>
+                        </div>
+
+                        <div [hidden] = "!stap1">
+                            <th><img class="fblogo offset-s3 levelImage" src="/assets/img/charity.png"/></th>
                             <th><div><label class="bubbleText">Daarom is het belangrijk om solidair te zijn en te denken aan onze gezondheid en aan die van anderen.</label></div></th>
                         </div>
                         
                         <div [hidden] = "!stap2">
-                            <th><div class="box1 sb51"><label class="bubbleText">Mondmaskers helpen ons om besmette mensen te verzorgen. Maar diezelfde mondmaskers geven een vals gevoel van bescherming als je ze op straat zou dragen.</label></div></th>
+                            <th><div class="verpleegsterEnDokter box1 sb51"><label class="bubbleTextInBubbel">In de zorg zijn mondmaskers noodzakelijk omdat ze ons helpen besmette patiënten te verzorgen. Buiten de zorg echter geven ze een vals gevoel van bescherming.</label></div></th>
                         <!--<th><img src="{{quizService.getRandomAvatar()}}" class="avatar"></th> -->
-                            <th><img class="fblogo offset-s3 levelImage" src="/assets/img/nurse.png"/></th>
-                            <th><img class="fblogo offset-s3 underImage roundImage" src="/assets/img/mask.png"/></th>
+                            <th><img class="verpleegsterEnDokter fblogo offset-s3 levelImage" src="/assets/img/nurse.png"/></th>
+                            <th><img class="verpleegsterEnDokter fblogo offset-s3 underImage roundImage" src="/assets/img/mask.png"/></th>
                         </div>  
 
-                        <div [hidden] = "!stap3">
-                            <th><div><label class="bubbleText" >De overheid heeft een website die alle informatie bevat omtrent wat je kan doen om jezelf en je omgeving te beschermen: <br><label class="infoLabels">https://www.info-coronavirus.be/</label></label></div></th>
-                            <th><img class="fblogo offset-s3 levelImage" src="/assets/img/website.png"/></th>
-                            <th><img class="fblogo offset-s3 underImage" src="/assets/img/telephone.png"/></th>
-                            <th><div><label class="bubbleText">Voor meer specifieke vragen kan je steeds naar dit telefoonnummer van de overheid bellen: <br><label class="infoLabels">0800 14 689</label></label></div></th>
-                        </div> 
-
-
+                        <!--<div [hidden] = "!stap3">
+                            <th><div><label class="tabelVoorGaNaarBadge bubbleText verpleegsterEnDokter" >De <b>overheid</b> heeft een website die alle informatie bevat omtrent wat je kan doen om jezelf en je omgeving te beschermen: <br><label class="infoLabels">https://www.info-coronavirus.be/</label></label></div></th>
+                            <th><img class="fblogo offset-s3 levelImage verpleegsterEnDokter" src="/assets/img/website.png"/></th>
+                            <th><img class="fblogo offset-s3 underImage verpleegsterEnDokter" src="/assets/img/telephone.png"/></th>
+                            <th><div><label class="tabelVoorGaNaarBadge bubbleText verpleegsterEnDokter">Voor meer specifieke vragen kan je steeds naar dit telefoonnummer van de <b>overheid</b> bellen: <br><label class="infoLabels">0800 14 689</label></label></div></th>
+                        </div> -->
                     </tr>                    
                     
                     <tr class="bubbleColumn">
 
-                        <div [hidden] = "!stap1">
-                            <th><div><label class="bubbleText">Verzorging van besmette patiënten vergt veel aandacht en apparatuur.</label></div></th>                            
+                        <div [hidden] = "!stap1b">
+                            <th><div><label class="bubbleText" >Verzorging van besmette patiënten vergt veel aandacht en apparatuur.</label></div></th>
                             <th><img class="fblogo offset-s3 levelImage" src="/assets/img/kidney.png"/></th>
-                            <th><img class="fblogo offset-s3 underImage" src="/assets/img/ambulance.png"/></th>
-                            <th><div><label class="bubbleText">Om die reden is het ook belangrijk om de maatregelen zoveel mogelijk op te volgen opdat ons gezondheidsysteem niet onder druk komt te staan.</label></div></th>
                         </div>
 
+                        <div [hidden] = "!stap1b">
+                            <th><img class="fblogo offset-s3 levelImage" src="/assets/img/ambulance.png"/></th>
+                            <th><div><label class="bubbleText">Om die reden is het ook belangrijk om de maatregelen zoveel mogelijk te volgen opdat ons gezondheidssysteem niet onder druk komt te staan.</label></div></th>
+                        </div>
+
+
                         <div [hidden] = "!stap2">
-                            <th><img class="fblogo offset-s3 underImage roundImage handen" src="/assets/img/handwassen.png"/></th>
-                            <th><div class="box1 sb52"><label class="bubbleText">Belangrijker is om regelmatig je handen te wassen met zeep.</label></div></th>
+                            <th><img class="verpleegsterEnDokter fblogo offset-s3 underImage roundImage handen" src="/assets/img/handwassen.png"/></th>
+                            <th><div class="verpleegsterEnDokter box1 sb52"><label class="bubbleTextInBubbel">Belangrijker is om regelmatig je handen te wassen met zeep.</label></div></th>
                         <!--<th><img src="{{quizService.getRandomAvatar()}}" class="avatar"></th> -->
-                            <th><img class="fblogo offset-s3 levelImage" src="/assets/img/doctors/male.png"/></th>                  
+                            <th><img class="verpleegsterEnDokter fblogo offset-s3 levelImage" src="/assets/img/doctors/male.png"/></th>                  
                         </div>                        
 
 
                     </tr>                                  
                   </div>
                 </td>
+                <!-- added this td below-->
+                <td [hidden] = "!stap3" >
+                    <div>
+                        <tr>
+                            <div>
+                                <tr>
+                                    <th><img class="fblogo offset-s3 levelImage verpleegsterEnDokter" src="/assets/img/website.png"/></th>
+                                    <th><div><label class=" bubbleText verpleegsterEnDokter" >De <b>overheid</b> heeft een website die alle informatie bevat omtrent wat je kan doen om jezelf en je omgeving te beschermen: <br><label class="infoLabels">https://www.info-coronavirus.be/</label></label></div></th>
+                                    
+                                </tr>
+                                <tr>
+                                    <td><img class="fblogo offset-s3 underImage verpleegsterEnDokter" src="/assets/img/telephone.png"/></td>
+                                    <td><div><label class=" bubbleText verpleegsterEnDokter">Voor meer specifieke vragen kan je steeds naar dit telefoonnummer van de <b>overheid</b> bellen: <br><label class="infoLabels">0800 14 689</label></label></div></td>
+                                    
+                                </tr>
+                                </div>
+                        </tr>
+                    </div>
+                </td>
             </tr>
             <tr class="bubbleColumn">
-                <th [hidden] = "!stap1"><button class="center levelButton waves-effect waves-light btn-large btn-submit optie zwarteLetters" (click)="GoToStep2()" (click)="VerhoogProgressTeller()">Volgende</button></th>
-                <th [hidden] = "!stap2"><button class="center levelButton waves-effect waves-light btn-large btn-submit optie zwarteLetters" (click)="GoToStep3()" (click)="VerhoogProgressTeller()">Klik. Je bent er bijna!</button></th>
-                <th [hidden] = "!stap3"><button class="center levelButton waves-effect waves-light btn-large btn-submit optie zwarteLetters" (click)="GoToOverview()">Ga naar je badge!</button></th>
+                <th [hidden] = "!stap1"><button class="center levelButton waves-effect waves-light btn-large btn-submit optie zwarteLetters" (click)="GoToStep2()" (click)="VerhoogProgressTeller()"><i class="material-icons right">chevron_right</i>Volgende</button></th>
+                <th [hidden] = "!stap1b"><button class="center levelButton waves-effect waves-light btn-large btn-submit optie zwarteLetters" (click)="GoToStep1b()" (click)="VerhoogProgressTeller()"><i class="material-icons right">chevron_right</i>Volgende</button></th>
+                <th [hidden] = "!stap2"><button class="center levelButton waves-effect waves-light btn-large btn-submit optie zwarteLetters" (click)="GoToStep3()" (click)="VerhoogProgressTeller()"><i class="material-icons right">mood</i>Klik. Je bent er bijna!</button></th>
+                <th [hidden] = "!stap3"><button class="center levelButtonLaatste waves-effect waves-light btn-large btn-submit optie zwarteLettersLaatste" (click)="GoToOverview()"><i class="material-icons right">thumb_up</i>Ga naar je badge!</button></th>
             </tr>
 
           </div> 

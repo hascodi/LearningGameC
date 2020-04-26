@@ -8,6 +8,7 @@
       text-align: center;
       text-transform: uppercase;
       font-family: 'Quicksand', sans-serif !important;
+      height: 65px;
   }
 
   .optie {
@@ -118,7 +119,9 @@
 
 
 .bubbleColumn {
+    margin-top: auto;
     border: none;
+    margin-bottom: auto;
 }
 
 .progressDisplay {
@@ -169,6 +172,7 @@
 .tabel {
     padding-left: 300px;
     padding-right: 300px;
+    padding-top: 1px;
 }
 
 .bubbleText{
@@ -179,29 +183,72 @@
   }  
 
 .underImage {
-    margin-top: 5px;
+    margin-top: auto;
     width: 150px;
     height: 150px;
     display: block;
     margin-left: 10px;
     margin-right: 10px;
+
+    font-weight: bold;
+    position: relative;
+    animation: mymoveEnabled 2s 1;
+    animation-timing-function: ease-in-out;
 }
+
+@keyframes mymoveEnabled {
+    from {left: 300px;}
+    to {left: 0px;}
+  }
 
 .disabledBagde {
     filter: grayscale(100%);
+    text-align: right;    
+    
+    font-weight: bold;
+    position: relative;
+    animation: mymove 2s 1;
+    animation-timing-function: ease-in-out;
 }
 
+@keyframes mymove {
+    from {left: 300px;}
+    to {left: 0px;}
+  }
+
 .awardTabel {
-    border-collapse: collapse;
-    width: 10px;
+    margin-top: auto;
+    border-collapse: unset !important;
+}
+
+.nextButton {
+      margin-top: 10px;
+      margin-bottom: 10px;
+}
+
+.badgesText {
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight: 500;  
+    font-family: 'Quicksand';
+    text-align: left;
+    margin-bottom: auto;
+    margin-top: auto;
+    text-transform: uppercase;
+    text-align: left;
   }
 
-  .nextButton {
-      margin-top: 25px;
+.linkerDeel {
+    padding-left: 10px;
+}
+
+.teWinnenBadgesTekst {
+    color: white;
+    font-size: small;
+    font-weight: 500;  
+    font-family: 'Quicksand';
+    padding: 1px !important;
   }
-
-
-
 
 
 

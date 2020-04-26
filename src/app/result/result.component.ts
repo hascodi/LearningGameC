@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { QuizService } from '../shared/quiz.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -32,9 +32,12 @@ export class ResultComponent implements OnInit {
         //this.quizService.businessAnswerCount = 0;
         //this.quizService.securityAnswerCount = 0;
         //this.quizService.iotAnswerCount = 0;
+        this.quizService.correnctAnswerCount = 0;
         this.quizService.qns.forEach((e,i)=>{
           if(e.answer == data[i])//vergelijk het gekozen antwoord met het juiste antwoord
-          this.quizService.softwareAnswerCount++;//DIT IS TIJDELIJK
+          //this.quizService.softwareAnswerCount++;//DIT IS TIJDELIJK
+          this.quizService.correnctAnswerCount++;
+          e.correct = data[i];
           
           /*if(e.answer == 1)
           {
@@ -79,13 +82,5 @@ export class ResultComponent implements OnInit {
 
   goToBridgeBuilder() {
     this.router.navigate(['/bridgebuilder']);
-  }
-
-  showMeReceivedMessage() {
-    return this.quizComponent.newMessage();
-  }  
-
-  newMessage2() {//ADDED
-    this.sharedService.nextMessage("Second Message")
   }
 }

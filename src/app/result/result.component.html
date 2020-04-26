@@ -9,7 +9,7 @@
         <!--<object data="/assets/img/trophies/trophy2.png" style="width: 250px;height : 250px;" >
           <img src="{{quizService.getRandomTrophy()}}" style="width: 250px;height : 250px;">
         </object>!-->  
-        <h4 class="header resultTitel">Dit is uw Corona-kennis score:</h4> 
+        <!--<h4 class="header resultTitel">Dit is uw Corona-kennis score:</h4> -->
         <!--<span>{{showMeReceivedMessage()}}</span>-->
       </div>
       <div class="card-stacked">
@@ -27,22 +27,28 @@
   <div class="col s8 offset-s2">
     <div class="card-panel extraBorderResBlack">
       <div class="row resultParent">        
-          <h5 class="col s10 resultPercentage">{{quizComponent.ShowMeSecurityCount()}}</h5>
+          <!--<h5 class="col s10 resultPercentage">{{quizComponent.ShowMeSecurityCount()}}</h5>-->
+          <!--<h5>{{quizService.correctAnswerCount}}/2</h5>-->
+          <h5 class="reportTitle center">WorkerPro Games Achievements Report</h5>
       </div>
-      <div class="progress">
+      <!--<div class="progress">
           <div class="determinateGatekeeper progressGatekeeper" [style.width.%]="quizComponent.ShowMeSecurityCount()"></div>          
-      </div>
+      </div>-->
       <table style="width:100%">
         <tr>        
-          <th class="bubbleColumn"><img class="fblogo offset-s3 underImage extraLeftSpace" src="/assets/img/badge1.png"/><label class="labelBadge">WorkerPro COVID-19 Safety Badge</label></th>
-          <th class="bubbleColumn"><img class="fblogo offset-s3 underImage " src="/assets/img/badge2.png"/><label class="labelBadge">WorkerPro Golden Champion</label></th>
+          <th class="bubbleColumn"><img class="fblogo offset-s3 underImage extraLeftSpace left" src="/assets/img/badge1.png"/></th>
+          <th class="bubbleColumn"><img class="fblogo offset-s3 underImage extraRightSpace right" src="/assets/img/badge2.png"/></th>
+        </tr>
+        <tr>
+          <th><label class="labelBadge left">WorkerPro COVID-19 Safety Badge</label></th>
+          <th><label class="labelBadge right">WorkerPro Golden Champion</label></th>
         </tr>
       </table> 
   </div>  
 
-  <form class="formulier" #registerForm="ngForm" (ngSubmit)="OnSubmit(Email.value)">  
+  <!--<form class="formulier" #registerForm="ngForm" (ngSubmit)="OnSubmit(Email.value)">  
     <div class="row">
-      <h4 class="formFields center">Ontvang je score en je badge per mail!</h4>
+      <h3 class="formFields center">Ontvang je score en je badge per mail!</h3>
         <div class="input-field col s12">
             <i class="material-icons prefix iconColor">mail_outline</i>
             <input type="text" class="formFields" name="Email" #Email ngModel [pattern]="emailPattern">
@@ -51,10 +57,40 @@
     </div>
     <div class="row">
         <div class="input-field col s12"> 
-            <button class="waves-effect waves-light btn-large btn-submit" type="submit"  [disabled]="!registerForm.valid">Stuur me mijn welverdiende badge!</button>
+            <button class="waves-effect waves-light btn-large btn-submit" type="submit"  [disabled]="!registerForm.valid">Stuur me mijn welverdiende badge(s)!</button>
         </div>
     </div>  
-  </form>
+  </form>--> 
+
+  <button class="waves-effect waves-light btn-large btn-submit optie"><li class="optieLi" *ngIf="option != null" (click)="DownloadPdf()">
+    Download uw badges
+  </li></button>
+
+  <h4 class="formFields center">Bekijk hieronder het overzicht met alle vragen en antwoorden</h4>
+    <ng-container *ngFor="let qn of quizService.qns;let i=index">
+        <div class="card blue darken-1 cardBorder">
+            <div class="card-content white-text">
+                <span class="card-title">{{i+1}}</span>
+                <p class="vraag">{{qn.Qn}}</p>
+                <div *ngIf="qn.ImageName!=null">
+                    <img class="center" [src]="quizService.rootUrl+'/Images/'+qn.ImageName" style="width:200px;height:200px">
+                </div>
+            </div>
+            <div class="card-action">
+                <ul class="collection">
+                    <ng-container *ngFor="let option of qn.Options;let j = index">
+                        <li *ngIf="option != null" class="collection-item optie">
+                            {{option}}
+                            <span class="badge" *ngIf="qn.correct==j">
+                                <i class="material-icons green-text">sentiment_very_satisfied</i>                                
+                            </span>
+                            <span class="badge red-text" *ngIf="qn.answer==j && qn.correct!=j"><i class="material-icons red-yellow">sentiment_very_dissatisfied</i></span>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+    </ng-container>
 
 
   <footer class="page-footer footerColor">

@@ -72,9 +72,8 @@
   .registerButton {  
     margin-top: 5px !important;  
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     width:100%;
-    margin-left:0;
     margin-right:0;
     padding-left:0;
     padding-right:0;
@@ -82,6 +81,7 @@
     text-align:center;
     font-family: 'Quicksand';
     margin-left: 170px;
+    font-size: large;
   }
 
   .avatarDiv {
@@ -150,7 +150,6 @@
   
   /* Clear floats after image containers */
   .row::after {
-    content: "";
     clear: both;
     display: table;
   }
@@ -158,14 +157,6 @@
   .page-footer.footerColor {
     background: transparent;
   }
-
-  .footerLogo {
-    height: 30%;
-    width: 30%; 
-    margin-left: 600px;
-    float: left;
-    color: white;
-}
 
 .fblogo {
   display: inline-block;
@@ -222,33 +213,54 @@
 }
 
 .footerLogo {
-  margin-top: 10px;
-  float: left;
-  color: mintcream;
+  color: whitesmoke;
+  font-family: 'Quicksand';
+}
+
+.footerDiv {
+  padding-top: 50px;  
 }
 
 .underImage {
-  margin-top: 5px;
   width: 150px;
   height: 150px;
   display: block;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-bottom: auto;
 }
 
 .disabledBagde {
   filter: grayscale(100%);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+
+.grayscale.blur {
+  filter: blur(3px);
 }
 
 .awardTabel {
-    border-collapse: collapse;
-    width: 10px;
+    border-collapse: unset !important;
   }
 
 .badgesText {
   color: rgb(255, 255, 255);
+  font-size: large;
+  font-weight: 500;  
+  font-family: 'Quicksand';
+  text-align: center;
+  margin-bottom: auto;
+  margin-top: auto;
+  text-transform: uppercase;
+}
+
+table {  
+  border-collapse: unset !important;
+}
+
+.teWinnenBadgesTekst {
+  color: white;
   font-size: small;
   font-weight: 500;  
   font-family: 'Quicksand';
-  padding-left: 10px;
+  text-align: center;  
 }

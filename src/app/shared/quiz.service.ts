@@ -24,18 +24,17 @@ export class QuizService {
   seconds: number;
   qnProgress: number;
   timer;
-  allWeights: any[];//ADDED
+  allWeights: any[];
   softwareAnswerCount: number = 0;
   businessAnswerCount: number = 0;
   securityAnswerCount: number = 0;
-  iotAnswerCount: number = 0;
+  iotAnswerCount: number = 0; 
+  correnctAnswerCount: number = 0;
 
-  sentences = ["Kies wat het meest bij je past","Kies wat het meest bij je past","Goed bezig",
-                "Hmm interessant","En hop!", "Kiezen maar!", "Wat past het beste bij u?",
-              "Super! Hop naar de volgende", "Heel goed gedaan!", "Je bent er bijna!", "Zo, dit is de laatste vraag!"];
   
-  avatars = ["/assets/img/avatars/avatar1.png", "/assets/img/avatars/avatar2.png", 
-            "/assets/img/avatars/avatar3.png", "/assets/img/avatars/avatar4.png"];
+  
+  /*avatars = ["/assets/img/avatars/avatar1.png", "/assets/img/avatars/avatar2.png", 
+            "/assets/img/avatars/avatar3.png", "/assets/img/avatars/avatar4.png"];*/
 
   trophies = ["/assets/img/trophies/trophy1.png", "/assets/img/trophies/trophy2.png",
             "/assets/img/trophies/trophy3.png", "/assets/img/trophies/trophy4.png"];
@@ -82,7 +81,8 @@ export class QuizService {
 
   submitScore() {
     var body = JSON.parse(localStorage.getItem('participant'));
-    body.Score = this.softwareAnswerCount;//DIT IS TIJDELIJK
+    //body.Score = this.softwareAnswerCount;//DIT IS TIJDELIJK
+    body.Score = this.correnctAnswerCount;
     return this.http.post(this.rootUrl + "/api/UpdateOutput", body);
   }
 
@@ -95,13 +95,9 @@ export class QuizService {
 
   //other methods---------------------------------------
 
-  getLocalSentence(index: number) {
-    return this.sentences[index];
-  }
+  
 
-  getRandomAvatar() {
-    return this.avatars[Math.floor(Math.random()*this.avatars.length)];
-  }
+  
 
   getRandomTrophy() {
     return this.trophies[Math.floor(Math.random()*this.trophies.length)];

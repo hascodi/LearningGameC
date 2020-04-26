@@ -11,9 +11,10 @@ export class LeveltweeComponent implements OnInit {
 
   isShow = false; 
   stap1 = true;
+  stap1b = false;
   stap2 = false;
   stap3 = false;
-  progressTeller = 20;
+  progressTeller = 0;
 
 
   /*toggleDisplay() {
@@ -30,10 +31,19 @@ export class LeveltweeComponent implements OnInit {
         this.router.navigate(['/result']);*/
   }
 
-  GoToStep2() {
-    this.stap2 = !this.stap2;
-    this.stap1 = !this.stap1;
+  GoToStep1b() {
+    this.stap1 = false;
+    this.stap1b = false;
     this.stap3 = false;
+    this.stap2 = true;
+    window.scroll(0,0);
+  }
+
+  GoToStep2() {
+    this.stap2 = false;
+    this.stap1 = false;
+    this.stap3 = false;
+    this.stap1b = true;
     window.scroll(0,0);
   }
 

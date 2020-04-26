@@ -17,18 +17,35 @@ export class QuizComponent implements OnInit {
   iotCount: number = 0;
 
   message:string; //ADDED
-  isShow = false; 
+  isShow:boolean = false; 
+  isShowVragen:boolean = false;
+  clikTeller = 0;
  
   toggleDisplay() {
-    if (this.quizService.qnProgress+1 == 3) {
+    /*if (this.quizService.qnProgress == 2) {
       this.isShow = !this.isShow;
-    }
-    
+      //this.isShowVragen = true;
+    }*/
+
+    if (this.quizService.qnProgress == 10) {
+      //this.isShow = !this.isShow;
+      this.isShowVragen = true;
+    }    
   }
 
-  ReturnNumber() {
+  ReturnNumber() { //temp
     return this.quizService.qnProgress+1;
   }
+
+  ReturnShowVarNext() { //temp
+    return this.isShow;
+  }
+
+  ReturnShowVarVragen () {
+    return this.isShowVragen;
+  }
+
+
   
 
   constructor(private router: Router, private quizService: QuizService, private sharedService: SharedService) { } //ADDED sharedservice
@@ -38,8 +55,8 @@ export class QuizComponent implements OnInit {
       this.quizService.seconds = parseInt(localStorage.getItem('seconds'));
       this.quizService.qnProgress = parseInt(localStorage.getItem('qnProgress'));
       this.quizService.qns = JSON.parse(localStorage.getItem('qns'));
-      if (this.quizService.qnProgress == 10)
-        this.router.navigate(['/result']);
+      /*if (this.quizService.qnProgress == 10)
+        this.router.navigate(['/result']);*/
         /*else
         this.startTimer();*/
     }
@@ -59,43 +76,20 @@ export class QuizComponent implements OnInit {
       }
     )*/
 
-    this.sharedService.sharedMessage.subscribe(message => this.message = message) //ADDED
+    this.sharedService.sharedMessage.subscribe(message => this.message = message) //ADDED    
   }
 
   Answer(qID, choice) {
     this.quizService.qns[this.quizService.qnProgress].answer = choice; //we voegen een extra property answer toe en hierin sla je het antwoord van de gebruiker op
-    
-    //ADDED
-    /*if (this.quizService.qns[this.quizService.qnProgress].answer = 0) {
-      this.businessCount = this.businessCount + this.quizService.qns[this.quizService.qnProgress].BUS1;
-    }
-    else if (this.quizService.qns[this.quizService.qnProgress].answer = 1) {
-      this.businessCount = this.businessCount + this.quizService.qns[this.quizService.qnProgress].BUS2;
-    }*/
-    //this.businessCount = choice;
-    if (choice === 0) {
-      this.quizService.businessAnswerCount = this.quizService.businessAnswerCount + this.quizService.qns[this.quizService.qnProgress].BUS1;
-      //this.businessCount = this.businessCount + this.quizService.qns[this.quizService.qnProgress].BUS1;    
-      this.quizService.softwareAnswerCount = this.quizService.softwareAnswerCount + this.quizService.qns[this.quizService.qnProgress].SOF1;
-      this.quizService.iotAnswerCount = this.quizService.iotAnswerCount + this.quizService.qns[this.quizService.qnProgress].IOT1;
-      this.quizService.securityAnswerCount = this.quizService.securityAnswerCount + this.quizService.qns[this.quizService.qnProgress].CS1;
-      // hier de andere 3 profielen toevoegen  
-    }
-    else if (choice === 1) {
-      this.quizService.businessAnswerCount = this.quizService.businessAnswerCount + this.quizService.qns[this.quizService.qnProgress].BUS2;
-      this.quizService.softwareAnswerCount = this.quizService.softwareAnswerCount + this.quizService.qns[this.quizService.qnProgress].SOF2;
-      this.quizService.iotAnswerCount = this.quizService.iotAnswerCount + this.quizService.qns[this.quizService.qnProgress].IOT2;
-      this.quizService.securityAnswerCount = this.quizService.securityAnswerCount + this.quizService.qns[this.quizService.qnProgress].CS2;
-      
-      // hier de andere 3 profielen toevoegen
-    }
-
     localStorage.setItem('qns', JSON.stringify(this.quizService.qns));//sla lokaal op om bij refresh terug te keren waar je bent gebleven
-    this.quizService.qnProgress++;
+    this.quizService.qnProgress++;//deze is belangrijk en moet blijven staan
     localStorage.setItem('qnProgress', this.quizService.qnProgress.toString());//hetzelde als 2 lijnen hierboven
+    
+       
     /*if (this.quizService.qnProgress == 3) {
       this.router.navigate(['/result']);
     }   */ 
+
   }  
 
   GoToLevelTwo() {

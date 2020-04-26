@@ -78,17 +78,18 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
     font-weight: bold;
+    font-size: large;
 }
 
 .waves-effect.waves-light.btn-large:active {
-    background-color: grey;
+    background-color: #8F90FF;
 }
 
 .center {
     display: block;
-    margin-left: auto;
+    /*margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 50%;*/
   }
 
   .progressGatekeeper:before {
@@ -159,6 +160,13 @@
     color: white;
   }
 
+  .reportTitle {
+      font-family: 'Quicksand';
+      color: black;
+      letter-spacing: 0;
+      opacity: 1;
+  }
+
   .iconColor {
       color: white;
   }
@@ -199,5 +207,54 @@
     margin-left: 20px;
 }
 
+.extraRightSpace {
+    margin-right: 20px;
+}
+
+.optieLi:hover {
+    background-color: white !important;
+    color: black;
+    }
+
+    
+
+.vraag {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 50%;*/
+}
+
+.optie {
+    text-transform: uppercase;
+    font: regular 20px/86px Quicksand;
+    letter-spacing: 1px;
+    color: #000000;
+    opacity: 1;
+}
+
+.cardBorder {    
+    border-radius: 25px !important;
+    box-shadow: none;
+}
+
+table {  
+    border-collapse: unset !important;
+}
+
+.labelBadge {
+  color: black;
+  font-size: small;
+  font-weight: 600;  
+  font-family: 'Quicksand';
+}
 
 
