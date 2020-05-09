@@ -18,7 +18,8 @@ export class QuizService {
   //From this QuizService class I will consume the web API methods
 
   //properties------------------------------------------------------
-  readonly rootUrl = 'http://localhost:61073/';
+  //readonly rootUrl = 'http://localhost:61073/';
+  readonly rootUrl = 'https://learninggame.azurewebsites.net/';
   //some properties to save the questions----------
   qns: any[];
   seconds: number;

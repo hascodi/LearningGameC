@@ -214,7 +214,17 @@
 @keyframes mymove {
     from {left: 300px;}
     to {left: 0px;}
-  }
+}
+
+.teWinnenBadgesTekst {
+    color: white;
+    font-size: small;
+    font-weight: 500;  
+    font-family: 'Quicksand';
+    padding: 1px !important;
+    animation: mymoveEnabled 2s 1;
+    animation-timing-function: ease-in-out;
+}
 
 .awardTabel {
     margin-top: auto;
@@ -242,13 +252,7 @@
     padding-left: 10px;
 }
 
-.teWinnenBadgesTekst {
-    color: white;
-    font-size: small;
-    font-weight: 500;  
-    font-family: 'Quicksand';
-    padding: 1px !important;
-  }
+
 
 
 
