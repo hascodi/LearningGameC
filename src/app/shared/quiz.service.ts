@@ -19,7 +19,7 @@ export class QuizService {
 
   //properties------------------------------------------------------
   //readonly rootUrl = 'http://localhost:61073/';
-  readonly rootUrl = 'https://learninggame.azurewebsites.net/';
+  readonly rootUrl = 'https://learninggame.azurewebsites.net';
   //some properties to save the questions----------
   qns: any[];
   seconds: number;
