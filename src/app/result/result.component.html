@@ -29,7 +29,7 @@
       <div class="row resultParent">        
           <!--<h5 class="col s10 resultPercentage">{{quizComponent.ShowMeSecurityCount()}}</h5>-->
           <!--<h5>{{quizService.correctAnswerCount}}/2</h5>-->
-          <h5 class="reportTitle center">WorkerPro Games Achievements Report</h5>
+          <h5 class="reportTitle center">Uw overzicht</h5>
       </div>
       <!--<div class="progress">
           <div class="determinateGatekeeper progressGatekeeper" [style.width.%]="quizComponent.ShowMeSecurityCount()"></div>          
@@ -62,9 +62,9 @@
     </div>  
   </form>--> 
 
-  <button class="waves-effect waves-light btn-large btn-submit optie"><li class="optieLi" *ngIf="option != null" (click)="DownloadPdf()">
+  <!--<button class="waves-effect waves-light btn-large btn-submit optie"><li class="optieLi" *ngIf="option != null" (click)="DownloadPdf()">
     Download uw badges
-  </li></button>
+  </li></button>-->
 
   <h4 class="formFields center">Bekijk hieronder het overzicht met alle vragen en antwoorden</h4>
     <ng-container *ngFor="let qn of quizService.qns;let i=index">

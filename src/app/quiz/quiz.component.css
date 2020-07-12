@@ -202,7 +202,7 @@
   }
 
 .disabledBagde {
-    filter: grayscale(100%);
+    filter: grayscale(100%) blur(3px);
     text-align: right;    
     
     font-weight: bold;
